@@ -3,30 +3,46 @@
 <img width="1156" height="656" alt="image" src="https://github.com/user-attachments/assets/87249d94-2dda-4636-b373-7cbc86f3301f" />
 
 ## Overview
-A brief description of this Power BI project. This dashboard analyzes **sales data** to highlight key metrics like total sales, profit margin, top-selling products, and regional performance based on your image.
+A comprehensive Power BI dashboard analyzing the **Classicmodels dataset**. This project explores sales trends, customer behavior, product performance, and employee efficiency within a simulated model car retailer business.
 
 ## Business Questions Answered
-*   What were the total sales and profit margin for the period?
-*   Which product line contributed most to the overall sales?
-*   What are the top and bottom 5 selling products?
-*   How do sales vary by city and year?
+*   Which product lines generate the highest revenue?
+*   Which employees are the top performers based on sales figures?
+*   Where are our most valuable customers located, and what are their order patterns?
+*   How do payments and order statuses correlate with sales cycles?
 
 ## Data Sources
-List the data sources used in the project.
-*   `[e.g., SalesData.xlsx]`: Contains detailed transaction records.
-*   `[e.g., ProductLookup.csv]`: Contains product category information.
+The project utilizes the following standard CSV files from the Classicmodels database schema:
+
+*   `**customers.csv**`: Contains customer information (names, contact details, credit limits).
+*   `**employees.csv**`: Contains employee data and reporting structure.
+*   `**offices.csv**`: Contains sales office locations and contact information.
+*   `**order details.csv**`: Contains line-item details for each order (product code, quantity, price).
+*   `**orders.csv**`: Contains main order information (order number, dates, status, customer number).
+*   `**payments.csv**`: Contains records of customer payments.
+*   `**productlines.csv**`: Contains categories and descriptions for product lines.
+*   `**products.csv**`: Contains detailed product information (scale, vendor, price).
 
 ## Key Metrics & Calculations
 Mention some of the key measures and calculations (DAX) you created.
-*   **Total Sales:** `Sum of Sales` from the fact table.
-*   **Profit Margin %:** `([Total Profit] / [Total Sales]) * 100`.
-*   **Goal:** A reference line or measure showing the target sales (e.g., 0.28M as seen in your image).
+
+*   **Total Sales:** Sum of the calculated price for each item sold.
+*   **Average Order Value:** Total Sales / Count of unique orders.
+*   **Sales per Employee:** Total Sales attributed to specific sales representatives.
+*   **Customer Lifetime Value (CLV):** (Average Purchase Value) * (Number of Purchases) * (Customer Lifespan).
 
 ## Tools Used
-*   **Microsoft Power BI Desktop:** For data transformation, modeling, and visualization.
-*   **Power Query:** For data cleaning and shaping.
-*   **DAX:** For creating calculated measures and columns.
+*   **Microsoft Power BI Desktop:** For data transformation, modeling (star schema based on these files), and visualization.
+*   **Power Query:** For cleaning and shaping the CSV data.
+*   **DAX:** For creating complex measures and business logic.
 
-## Project Structure
-A typical repository structure for a Power BI project might look like this:
+## Insights & Findings
+*   **Classic Cars** consistently outperform other product lines in revenue generation.
+*   **Sales Representative performance** varies significantly by region (office location).
+*   High-value customers typically purchase **more than 5 items** per order.
+
+## Author
+* SWARANJALI HARKARE-https://www.linkedin.com/in/swaranjali-harkare-364a592a8/
+
+
 
